@@ -8,6 +8,7 @@ public class RandomNumGen : MonoBehaviour
     Text NumberText;
     [HideInInspector] public int number;
     int lastNumber;
+    public int maxNumber;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class RandomNumGen : MonoBehaviour
     {
         while (number == lastNumber)
         {
-            number = Random.Range(1, 6);
+            number = Random.Range(1, maxNumber);
         }
 
         lastNumber = number;
